@@ -1,15 +1,19 @@
-import Converter from './components/Generator'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import Generator from './components/Generator';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 function App() {
-  const queryClient = new QueryClient()
+  const queryClient = new QueryClient();
 
   return (
     <QueryClientProvider client={queryClient}>
-      <h1>⚡ColorWiz</h1>
-      <Converter />
+      <div className="wrapper">
+        <h1 className="main-heading">
+          The Color<span className="main-heading-span">Verse</span>
+        </h1>
+        <Generator />
+      </div>
     </QueryClientProvider>
-  )
+  );
 }
 
-export default App
+export default App;

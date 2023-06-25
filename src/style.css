@@ -1,18 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Moirai+One&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #040049;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.main-heading,
+.main-heading-span {
+  font-size: 3.2rem;
+  font-family: 'Moirai One', cursive;
+}
+
+.main-heading-span {
+  color: #0d00ff;
+}
+
+/* .sub-heading {
+  added at last with animation
+} */
+
+.scheme-label {
+  font-size: 1.25rem;
+  margin: 0 10px 10px 0;
+  text-decoration: underline #0d00ff;
+}
+
+.scheme-select {
+  font-size: 1.15rem;
+  margin: 0 10px 20px 0;
+  outline: 1px solid #040049;
+  border: none;
+  border-radius: 25px;
+  padding: 5px 10px;
+}
+
+.scheme-select:focus {
+  outline: 2px solid #040049;
 }
 
 .color {
   padding: 0;
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 200px;
   border: none;
   background: none;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms ease-in-out;
+}
+
+.color:hover {
+  transform: scale(1.03);
 }
 
 .color-group {
   display: flex;
   flex-direction: row;
+}
+
+.loading {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 auto;
+  width: 100vh;
+  height: 200px;
+  font-weight: bold;
+}
+
+.btn {
+  border: 1px solid;
+  padding: 5px 10px;
+  padding-bottom: 4px;
+  font-size: 1.05rem;
+}
+
+.primary-btn {
+  color: #0d00ff;
+  background-color: #fff;
+  border-radius: 25px;
+  transition: all 300ms ease-in-out;
+}
+
+.primary-btn:hover {
+  color: #fff;
+  background-color: #0d00ff;
+  transform: scale(1.03);
+}
+
+/* Animation Sub Heading */
+
+.sub-heading {
+  font-size: 1.3rem;
+  color: #fff;
+  display: inline-block;
+  padding: 2px 20px;
+  margin-bottom: 10px;
+  background: linear-gradient(270deg, #00ff84, #00b3ff, #d600d1);
+  border-radius: 25px;
+  background-size: 600% 600%;
+  transition: all 300ms ease-in-out;
+
+  -webkit-animation: AnimationName 8s ease infinite;
+  -moz-animation: AnimationName 8s ease infinite;
+  animation: AnimationName 8s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.sub-heading:hover {
+  transform: scale(1.03);
+  cursor: default;
 }
