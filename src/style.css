@@ -51,10 +51,14 @@ body {
   margin: 0 10px 10px 10px;
 }
 
+#chooseScheme * {
+  background-color: transparent;
+}
+
 .scheme-select {
   font-size: 1.15rem;
   margin: 5px 10px 10px 0;
-  outline: 1px solid #040049;
+  outline: 1.5px solid #040049;
   border: none;
   border-radius: 25px;
   padding: 5px 10px;
@@ -62,11 +66,10 @@ body {
 }
 
 .scheme-select:focus {
-  outline: 2px solid #040049;
+  outline: 2.5px solid #040049;
 }
 
 .copy-text {
-  margin-bottom: 10px;
   vertical-align: middle;
 }
 
@@ -98,7 +101,6 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 10px;
 }
 
 .axios-message {
@@ -110,8 +112,6 @@ body {
 
 .btn {
   border: 1px solid;
-  padding: 5px 10px;
-  padding-bottom: 4px;
   font-size: 1.05rem;
   margin-bottom: 5px;
 }

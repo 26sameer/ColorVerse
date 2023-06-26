@@ -13,7 +13,6 @@ export const getInitialColor = () => {
 export const getInitialMode = () => {
   const modes = ['analogic', 'monochrome', 'analogic-complement', 'quad'];
   const randomMode = Math.floor(Math.random() * 3);
-  console.log(randomMode);
 
   // const mode = 'analogic';
   return modes[randomMode];

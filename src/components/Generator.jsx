@@ -19,7 +19,14 @@ const Generator = () => {
   );
 
   if (isError) {
-    return <p className="axios-message">{error.message}</p>;
+    return (
+      <p
+        className="axios-message"
+        style={{ color: data?.data?.seed?.hex?.value }}
+      >
+        {error.message}
+      </p>
+    );
   }
 
   const handleClick = ev => {
@@ -61,9 +68,6 @@ const Generator = () => {
         isFetched={isFetched}
         data={data}
       />
-
-      {console.log(data?.data)}
-      {console.log(data?.data.mode)}
     </div>
   );
 };

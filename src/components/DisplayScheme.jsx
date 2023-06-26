@@ -11,7 +11,12 @@ const DisplayScheme = ({ isFetching, data, isFetched }) => {
       </li>
 
       {isFetching ? (
-        <p className="axios-message">LOADING...</p>
+        <p
+          className="axios-message"
+          style={{ color: data?.data?.seed?.hex?.value }}
+        >
+          LOADING...
+        </p>
       ) : (
         <div className="color-group">
           {/* Seed Color passed to API */}
