@@ -51,10 +51,6 @@ body {
   margin: 0 10px 10px 10px;
 }
 
-#chooseScheme * {
-  background-color: transparent;
-}
-
 .scheme-select {
   font-size: 1.15rem;
   margin: 5px 10px 10px 0;

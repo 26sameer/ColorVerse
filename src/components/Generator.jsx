@@ -58,7 +58,12 @@ const Generator = () => {
         </h1>
         <h3 className="sub-heading">Color Palette Generator</h3>
         <form>
-          <SelectScheme mode={mode} handleChange={handleChange} data={data} />
+          <SelectScheme
+            mode={mode}
+            handleChange={handleChange}
+            data={data}
+            isFetched={isFetched}
+          />
           <PrimaryButton handleClick={handleClick} data={data} />
         </form>
       </div>
