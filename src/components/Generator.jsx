@@ -19,7 +19,7 @@ const Generator = () => {
   );
 
   if (isError) {
-    return <div>{error.message}</div>;
+    return <p className="axios-message">{error.message}</p>;
   }
 
   const handleClick = ev => {
@@ -36,12 +36,27 @@ const Generator = () => {
 
   return (
     <div className="generator">
-      <h3 className="sub-heading">Color Palette Generator</h3>
-      <form>
-        <SelectScheme mode={mode} handleChange={handleChange} />
-        <PrimaryButton handleClick={handleClick} />
-      </form>
+      <div className="top">
+        <h1 className="main-heading">
+          The Color
+          <span
+            className="main-heading-span"
+            style={{
+              color: data?.data?.seed?.hex?.value,
+              backgroundColor: 'transparent',
+            }}
+          >
+            Verse
+          </span>
+        </h1>
+        <h3 className="sub-heading">Color Palette Generator</h3>
+        <form>
+          <SelectScheme mode={mode} handleChange={handleChange} data={data} />
+          <PrimaryButton handleClick={handleClick} data={data} />
+        </form>
+      </div>
       <DisplayScheme
+        className="display-scheme"
         isFetching={isFetching}
         isFetched={isFetched}
         data={data}

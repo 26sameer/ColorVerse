@@ -6,16 +6,14 @@ const DisplayScheme = ({ isFetching, data, isFetched }) => {
       <Tooltip id="my-tooltip" openOnClick="true">
         Copied! ✅
       </Tooltip>
+      <li className="copy-text">
+        ⭐ Click on Below Colors to Copy to Clipboard 📋
+      </li>
 
       {isFetching ? (
-        <p className="loading">LOADING...</p>
+        <p className="axios-message">LOADING...</p>
       ) : (
-        <div
-          className="color-group"
-          style={
-            isFetched ? { border: ' 2.5px solid #040049' } : { border: 'none' }
-          }
-        >
+        <div className="color-group">
           {/* Seed Color passed to API */}
           {data?.data?.seed && (
             <div
@@ -24,9 +22,17 @@ const DisplayScheme = ({ isFetching, data, isFetched }) => {
               data-tooltip-place="bottom"
               data-tooltip-content="Copied! ✅"
               data-tooltip-delay-hide={800}
-              style={{
-                backgroundColor: data?.data?.seed?.hex?.value,
-              }}
+              style={
+                isFetched
+                  ? {
+                      border: ` 2.5px solid #040049`,
+                      backgroundColor: data?.data?.seed?.hex?.value,
+                    }
+                  : {
+                      border: 'none',
+                      backgroundColor: data?.data?.seed?.hex?.value,
+                    }
+              }
               onClick={() =>
                 navigator.clipboard.writeText(`${data?.data?.seed?.hex?.value}`)
               }
@@ -47,9 +53,17 @@ const DisplayScheme = ({ isFetching, data, isFetched }) => {
                   data-tooltip-place="bottom"
                   data-tooltip-content="Copied! ✅"
                   data-tooltip-delay-hide={800}
-                  style={{
-                    backgroundColor: allColors?.hex?.value,
-                  }}
+                  style={
+                    isFetched
+                      ? {
+                          border: ` 2.5px solid #040049`,
+                          backgroundColor: allColors?.hex?.value,
+                        }
+                      : {
+                          border: 'none',
+                          backgroundColor: allColors?.hex?.value,
+                        }
+                  }
                   onClick={() =>
                     navigator.clipboard.writeText(`${allColors?.hex?.value}`)
                   }

@@ -7,9 +7,6 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="wrapper">
-        <h1 className="main-heading">
-          The Color<span className="main-heading-span">Verse</span>
-        </h1>
         <Generator />
       </div>
     </QueryClientProvider>

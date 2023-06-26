@@ -4,18 +4,32 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   font-family: 'Poppins', sans-serif;
   color: #040049;
+  transition: all 300ms ease-in-out;
 }
 
 .wrapper {
+  height: 100vh;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
+}
+
+.generator {
   height: 100vh;
-  height: 100dvh;
+}
+.top {
+  height: fit-content;
+}
+
+.display-scheme {
+  height: fit-content;
 }
 
 .main-heading,
@@ -34,31 +48,41 @@
 
 .scheme-label {
   font-size: 1.25rem;
-  margin: 0 10px 10px 0;
-  text-decoration: underline #0d00ff;
+  margin: 0 10px 10px 10px;
 }
 
 .scheme-select {
   font-size: 1.15rem;
-  margin: 0 10px 20px 0;
+  margin: 5px 10px 10px 0;
   outline: 1px solid #040049;
   border: none;
   border-radius: 25px;
   padding: 5px 10px;
+  cursor: pointer;
 }
 
 .scheme-select:focus {
   outline: 2px solid #040049;
 }
 
+.copy-text {
+  margin-bottom: 10px;
+  vertical-align: middle;
+}
+
+.copy-text::marker {
+  content: ' ';
+}
+
 .color {
   padding: 0;
-  height: 200px;
   width: 200px;
+  height: 200px;
   border: none;
   background: none;
   margin: 10px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   transition: all 300ms ease-in-out;
@@ -66,20 +90,22 @@
 
 .color:hover {
   transform: scale(1.03);
+  cursor: pointer;
 }
 
 .color-group {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px;
 }
 
-.loading {
+.axios-message {
+  font-weight: bold;
   font-size: 2rem;
   text-align: center;
   margin: 0 auto;
-  width: 100vh;
-  height: 200px;
-  font-weight: bold;
 }
 
 .btn {
@@ -87,6 +113,7 @@
   padding: 5px 10px;
   padding-bottom: 4px;
   font-size: 1.05rem;
+  margin-bottom: 5px;
 }
 
 .primary-btn {
@@ -97,9 +124,8 @@
 }
 
 .primary-btn:hover {
-  color: #fff;
-  background-color: #0d00ff;
   transform: scale(1.03);
+  cursor: pointer;
 }
 
 /* Animation Sub Heading */
@@ -157,4 +183,10 @@
 .sub-heading:hover {
   transform: scale(1.03);
   cursor: default;
+}
+
+@media only screen and (min-width: 700px) {
+  .generator {
+    height: fit-content;
+  }
 }

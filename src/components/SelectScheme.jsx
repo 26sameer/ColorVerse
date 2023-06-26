@@ -1,7 +1,13 @@
-const SelectScheme = ({ mode, handleChange }) => {
+const SelectScheme = ({ mode, handleChange, data }) => {
   return (
     <>
-      <label htmlFor="chooseScheme" className="scheme-label">
+      <label
+        htmlFor="chooseScheme"
+        className="scheme-label"
+        style={{
+          textDecoration: `underline ${data?.data?.seed?.hex?.value}`,
+        }}
+      >
         Choose a Scheme
       </label>
       <select
